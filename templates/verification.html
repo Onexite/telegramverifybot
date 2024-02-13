@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Verification</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #000;display: flex;justify-content: center;align-items: center; height: 100vh; margin: 0;  transition: background-color 5s ease;
+        }
+
+        body.change-background {
+            background-color: #3498db;
+        }
+
+        .siluat {
+            margin-top: -60px; color: white; position: absolute;display: block; opacity: 1;animation: essentials 5s forwards;
+        }
+
+        @keyframes essentials {
+            to {
+                opacity: 0;display: none;
+            }
+        }
+
+        .keygen {
+            margin-top: -20px;color: white; position: absolute; display: block; opacity: 1; animation: essentials2 10s forwards; font-weight: bolder;
+        }
+
+        @keyframes essentials2 {
+            to {
+                opacity: 0; display: none;
+            }
+        }
+
+
+        .verification-box {
+            width: 2px; height: 2px; background-color: #fff;overflow: hidden; text-align: center;border-radius: 20px; animation: expandBox 1s linear 3s forwards, testBox 5s linear 5s forwards;
+        }
+
+        @keyframes expandBox {
+            to {
+                width: 100%; height: 2px; background-color: rgba(0, 255, 21, 0.502);
+            }
+        }
+
+        @keyframes testBox {
+            to {
+                width: 70%; height: 30vh;background-color: #f8f9fa;
+            }
+        }
+
+
+        .token-text {
+            font-size: 18px;font-weight: bold; color: #212529; margin-bottom: 10px;
+        }
+
+        .website-link {
+            font-size: 21px;color: #007bff;font-weight: bolder;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin-bottom: 10px;
+        }
+
+        .btn-danger {
+            background-color: #dc3545; color: #fff;
+        }
+    </style>
+</head>
+<p class="siluat"> Lütfen bekleyin. </p><br>
+<p class="keygen"> {{ token }} {{ chat_id }}  </p><br>
+
+<body>
+    <div class="verification-box"><br>
+        <p class="website-link">DOĞRULAMA BAŞARILI</p>
+        <hr>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
