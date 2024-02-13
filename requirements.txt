@@ -1,0 +1,7 @@
+python-telegram-bot==14.0
+flask==2.0.2
+flask_sqlalchemy==3.0.0
+requests==2.26.0
+mysql-connector-python==8.0.28
+python-dotenv==0.19.1
+tabulate==0.8.9
